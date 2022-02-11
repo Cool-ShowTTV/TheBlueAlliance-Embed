@@ -1,0 +1,3 @@
+[submodule "tba-api-client-php"]
+	path = tba-api-client-php
+	url = https://github.com/TBA-API/tba-api-client-php
