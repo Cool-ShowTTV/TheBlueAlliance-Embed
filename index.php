@@ -1,9 +1,9 @@
 <?php
 $APIKey = getenv('API-Key');
-if ($_GET['link']){
-    echo true;
+if (isset($_GET['link'])){
+    echo"Link exists";
 }else{
-    echo false;
+    echo"Link doesn't exist";
 }
 
 ?>
