@@ -1,5 +1,5 @@
 <?php
 $APIKey = getenv('API-Key');
-echo ($APIKey);
+echo $_GET['link'];
 
 ?>
