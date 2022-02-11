@@ -1,5 +1,9 @@
 <?php
 $APIKey = getenv('API-Key');
-echo $_GET['link'];
+if ($_GET['link']){
+    echo true;
+}else{
+    echo false;
+}
 
 ?>
