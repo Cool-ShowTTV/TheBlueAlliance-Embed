@@ -1,20 +1,14 @@
 <?php
 include "requests.php";
 $year = date("Y");//Get current year
-$svg = false; //Ignore this is a test
 $svgTextSpace = 15;
 
-if (isset($_GET['svg'])){
-    if ($_GET['svg'] == "true" || $_GET['svg'] == 1 || $_GET['svg'] = "t"){
-        header('Content-Type: image/svg+xml');
-        echo '<svg
-            height="30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >';
-        $svg = true;
-    }
-}
+header('Content-Type: image/svg+xml');
+echo '<svg
+    height="45"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>';
 
 if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset($_POST['team'])){
     // The messiest way to get input I have ever done don't look
@@ -46,13 +40,12 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
         $formatedStartDate = date_format(date_create($startDateColumns[$x]), "F j");
         $formatedEndDate = date_format(date_create($endDateColumns[$x]), "j");
 
-        // Output the list of events with Start and End date
-        if (!$svg){
-            echo "$formatedName $formatedStartDate-$formatedEndDate<br>\n";
-        }else{
-            echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"Courier, Monospace\" fill=\"#d7d3cb\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
-            $svgTextSpace += 15;
-        }
+        // Old output
+        //echo "$formatedName $formatedStartDate-$formatedEndDate<br>\n";
+
+        // Output the list of events with Start and End date in SVG format
+        echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"Courier, Monospace\" fill=\"#d7d3cb\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
+        $svgTextSpace += 15;
     }
 }else{
     // I am going to add a home page one I get a chance but for now it's going to out and error
@@ -61,4 +54,4 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
 }
 
 // End SVG file
-if ($svg){echo '</svg>';}
+echo '</svg>';
