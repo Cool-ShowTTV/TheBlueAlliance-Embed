@@ -1,5 +1,6 @@
 <?php
 include "requests.php";
+$year = date("Y");//Get current year
 
 // Checks if the user gives a team number
 if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset($_POST['team'])){
@@ -14,8 +15,8 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
         $number = $_GET['team'];
     }
 
-    $teamInfo = sendRequest("https://www.thebluealliance.com/api/v3/team/frc{$number}");
-    $upcomingEvents = sendRequest("https://www.thebluealliance.com/api/v3/team/frc{$number}/events/{$year}/simple");
+    $teamInfo = getTeamInfo(4272,false);
+    $upcomingEvents = getTeamInfo(4272,false);
     echo $teamInfo;
     echo "\n";
     echo $upcomingEvents;
