@@ -1,6 +1,8 @@
 # Hide keys
 .env
 
+# Hide Test files
+test* 
 
 ##### Windows
 # Windows thumbnail cache files
