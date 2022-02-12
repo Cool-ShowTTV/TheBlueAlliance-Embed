@@ -3,6 +3,13 @@ include "requests.php";
 $year = date("Y");//Get current year
 $svgTextSpace = 15;
 
+// Check if user put a custom color
+if (isset($_GET['color'])){
+    $svgColor = $_GET['color'];
+}else{
+    $svgColor = "d7d3cb";
+}
+
 header('Content-Type: image/svg+xml');
 echo '<svg
     height="45"
@@ -40,7 +47,7 @@ if (isset($_GET['num']) || isset($_GET['team'])){
         //echo "$formatedName $formatedStartDate-$formatedEndDate<br>\n";
 
         // Output the list of events with Start and End date in SVG format
-        echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"Courier, Monospace\" fill=\"#d7d3cb\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
+        echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"Courier, Monospace\" fill=\"#$svgColor\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
         $svgTextSpace += 15;
     }
 }else{
