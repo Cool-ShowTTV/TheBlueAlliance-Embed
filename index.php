@@ -59,3 +59,6 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
     http_response_code(400);
     echo json_encode(array("Error"=>"Failed: no 'num' status", "Note"=>"A home page is coming soon I just have not done it yet"),JSON_PRETTY_PRINT);
 }
+
+// End SVG file
+if ($svg){echo '</svg>';}
