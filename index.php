@@ -38,5 +38,5 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
 }else{
     // I am going to add a home page one I get a chance but for now it's going to out and error
     http_response_code(400);
-    echo json_encode(array("Error"=>"Failed: no 'num' status"));
+    echo json_encode(array("Error"=>"Failed: no 'num' status", "Note"=>"A home page is coming soon I just have not done it yet"),JSON_PRETTY_PRINT);
 }
