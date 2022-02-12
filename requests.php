@@ -26,7 +26,6 @@ function sendRequest(string $url, bool $json = false){
     $resp = curl_exec($curl);
     curl_close($curl);
     $resp = json_decode($resp,true);
-    $resp[] = array("status"=>"Success");
     if(!$json){$resp = json_encode($resp,JSON_PRETTY_PRINT);}
     return $resp;
 }

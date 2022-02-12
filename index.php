@@ -20,7 +20,7 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
     echo "\n";
     echo $upcomingEvents;
 }else{
-    echo json_encode(array("status"=>"Failed: no 'num' status"));
+    echo json_encode(array("Error"=>"Failed: no 'num' status"));
 }
 
 ?>
