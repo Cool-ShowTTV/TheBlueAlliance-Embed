@@ -1,11 +1,19 @@
 <?php
 include "requests.php";
+
+// Checks if the user gives a team number
 if (isset($_GET['num']) || isset($_POST['num'])){
+    // The messiest way to get input I have ever done
     if (isset($_POST['num'])){
         $number = $_POST['num'];
-    }else{
+    }elseif (isset($_GET['num'])){
+        $number = $_GET['num'];
+    }elseif (isset($_POST['team'])){
+        $number = $_POST['num'];
+    }elseif (isset($_GET['team'])){
         $number = $_GET['num'];
     }
+
     $teamInfo = sendRequest("https://www.thebluealliance.com/api/v3/team/frc{$number}");
     $upcomingEvents = sendRequest("https://www.thebluealliance.com/api/v3/team/frc{$number}/events/{$year}/simple");
     echo $teamInfo;
