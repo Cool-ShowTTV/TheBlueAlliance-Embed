@@ -10,14 +10,10 @@ echo '<svg
     xmlns="http://www.w3.org/2000/svg"
 >';
 
-if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset($_POST['team'])){
+if (isset($_GET['num']) || isset($_GET['team'])){
     // The messiest way to get input I have ever done don't look
-    if (isset($_POST['num'])){
-        $number = $_POST['num'];
-    }elseif (isset($_GET['num'])){
+    if (isset($_GET['num'])){
         $number = $_GET['num'];
-    }elseif (isset($_POST['team'])){
-        $number = $_POST['team'];
     }elseif (isset($_GET['team'])){
         $number = $_GET['team'];
     }
