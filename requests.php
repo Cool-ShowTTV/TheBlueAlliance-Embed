@@ -1,6 +1,5 @@
 <?php
-//$APIKey = getenv('API-Key'); //Used to get the API key from environment vars
-$APIKey = 'QrxPhkDI2tgCAWIQvyMtZBmCKWGbeJVrXSgd70SjHGWT8fQfKHOO2EQ8P9rZGMSw';
+$APIKey = getenv('API-Key'); //Used to get the API key from environment vars
 $year = date("Y");//Get current year
 
 /**
