@@ -16,7 +16,7 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
     }
 
     $teamInfo = getTeamInfo(4272,false);
-    $upcomingEvents = getTeamInfo(4272,false);
+    $upcomingEvents = getEventInfo(4272,$year,false);
     echo $teamInfo;
     echo "\n";
     echo $upcomingEvents;
