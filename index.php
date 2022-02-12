@@ -50,8 +50,8 @@ if (isset($_GET['num']) || isset($_POST['num']) || isset($_GET['team']) || isset
         if (!$svg){
             echo "$formatedName $formatedStartDate-$formatedEndDate<br>\n";
         }else{
-            echo "<text y=\"$svgTextSpace\"  font-size=\"10\" font-family=\"Courier, Monospace\" fill=\"#d7d3cb\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
-            $svgTextSpace += 10;
+            echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"Courier, Monospace\" fill=\"#d7d3cb\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
+            $svgTextSpace += 15;
         }
     }
 }else{
