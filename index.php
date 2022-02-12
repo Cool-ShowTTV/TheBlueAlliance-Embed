@@ -6,6 +6,7 @@ $svgTextSpace = 15;
 
 if (isset($_GET['svg'])){
     if ($_GET['svg'] == "true" || $_GET['svg'] == 1 || $_GET['svg'] = "t"){
+        header('Content-Type: image/svg+xml');
         echo '<svg
             height="30"
             fill="none"
