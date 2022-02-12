@@ -1,3 +1,4 @@
+# Not done yet!
 # thebluealliance-embed
 The idea is to have a [Blue Alliance](https://www.thebluealliance.com/) embed that can list events.
 
