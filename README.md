@@ -12,7 +12,7 @@ If you want an example of what it looks like here is The Juggernauts' embeded in
 
 
 ## Future Ideas:
-- [ ] Have a JS that can be added to auto put B.A. events for teams.
+- [ ] Have a JS that can be added to auto put TBA events for teams. (no real reason just a challenge)
 
 ## To Do:
 - [ ] Home page to make embeds easier for people.
