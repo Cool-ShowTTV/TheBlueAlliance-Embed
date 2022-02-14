@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            /*-----------------------------------\
+            |   I am not going to comment this   |
+            |         there is too mutch         |
+            |and I coded the css like a month ago|
+            |        so just deal with it        |
+            \___________________________________*/
+            @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+            @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+            body {
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+                font-family: "Montserrat", sans-serif;
+                height: 100vh;
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+            }
+
+
+            /* this moves the background gradient
+            so if you want to have a static background remove this */
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+        <style>
+            /* this is the style for all the stuff in content*/
+            .content {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>
+            // It is entirely unneeded to fade in the page
+            // but I like it so I'm keeping it :P
+            function fadeInPage() {
+                for (let i = 1; i < 100; i++) {
+                    fadeIn(i * 0.01);
+                }
+            
+                function fadeIn(i) {
+                    setTimeout(function() {
+                        document.body.style.opacity = i;
+                    }, 2000 * i);
+                }
+            }
+
+            // Simple change element's text to a new one
+            // with a typewriter effect because I like it
+            function updateMessage(message) {
+                let i = 0;
+                let speed = 50;
+                let textLength = message.length;
+                let interval = setInterval(function() {
+                    if (i < textLength) {
+                        document.querySelector("#message").innerHTML += message.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, speed);
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body style="opacity:0" onload='fadeInPage()'>
+        <div id="content">
+            
+        </div>
+        <!-- Message element is used to give any messages to the user -->
+        <div id="message"></div>
+    </body>
+
+</html>
