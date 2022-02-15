@@ -1,6 +1,7 @@
 # Not done yet, but should work please leave any feedback in the [discussions tab](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/discussions)
 
 ## How to use
+There will be a home page to make getting link info quicker!<br>
 Embed this link in an IFrame and replace "teamNum" with the team number you want<br>
 ```https://thebluealliance-embed.herokuapp.com/?num=teamNum```<br>
 If you want to embed into your GitHub's organizations do this and replace "teamNum" with the team number you want<br>
