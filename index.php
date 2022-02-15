@@ -55,15 +55,12 @@ if (isset($_GET['num']) || isset($_GET['team'])){
     // End SVG file
     echo '</svg>';
 }else{
-    if (file_exists("god")) {
+    // Check if home file exists and if hosted on localhost
+    if (file_exists("pages/home.html") && $_SERVER ['SERVER_NAME'] == "localhost") {
 
         header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
-        header("Cache-Control: public"); // needed for internet explorer
-        header("Content-Type: application/zip");
-        header("Content-Transfer-Encoding: Binary");
-        header("Content-Length:".filesize($attachment_location));
-        header("Content-Disposition: attachment; filename=file.zip");
-        readfile($attachment_location);
+        header("Content-Length:".filesize("pages/home.html"));
+        readfile("pages/home.html");
         die();        
     } else {
         echo("<style>
