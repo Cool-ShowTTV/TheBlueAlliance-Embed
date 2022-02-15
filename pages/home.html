@@ -69,6 +69,22 @@
                 }
             }
 
+            // Remove text from message like a typewriter because fancy
+            // I don't know if i'll ever use this but i'm keeping it
+            function removeMessage() {
+                let speed = 50;
+                let textLength = document.querySelector("#message").innerHTML.length;
+                let interval = setInterval(function() {
+                    if (textLength > 0) {
+                        document.querySelector("#message").innerHTML = document.querySelector("#message").innerHTML.slice(0, textLength - 1);
+                        textLength--;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, speed);
+            }
+
+
             // Simple change element's text to a new one
             // with a typewriter effect because I like it
             function updateMessage(message) {
