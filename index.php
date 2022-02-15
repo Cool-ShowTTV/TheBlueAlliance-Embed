@@ -27,6 +27,14 @@ if (isset($_GET['num']) || isset($_GET['team'])){
         $svgColor = "d7d3cb";
     }
 
+    // Check if user put a custom font name
+    // I have no idea what font names are valid though
+    if (isset($_GET['font'])){
+        $fontName = $_GET['font'];
+    }else{
+        $fontName = "Courier, Monospace";
+    }
+
     // Get a list of all upcoming events for a team number
     $upcomingEvents = getEventInfo($number,$year,true);
 
@@ -49,7 +57,7 @@ if (isset($_GET['num']) || isset($_GET['team'])){
         //echo "$formatedName $formatedStartDate-$formatedEndDate<br>\n";
 
         // Output the list of events with Start and End date in SVG format
-        echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"Courier, Monospace\" fill=\"#$svgColor\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
+        echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"$fontName\" fill=\"#$svgColor\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
         $svgTextSpace += 15;
     }
     // End SVG file
