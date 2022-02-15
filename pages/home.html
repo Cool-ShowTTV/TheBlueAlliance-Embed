@@ -2,6 +2,15 @@
 <html lang="en">
     <head>
         <title>The Blue Alliance Embed Maker</title>
+        <!--
+            Favicons stolen from thebluealliance.com
+            If you work at TBA and are not ok with me using the icon DM me
+            My Discord is in my about page on github
+        -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+        <!-- Meta tags -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">
@@ -28,6 +37,8 @@
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                 flex-direction: column;
+
+                color:white;
             }
 
 
@@ -49,8 +60,23 @@
         </style>
         <style>
             /* this is the style for all the stuff in content*/
-            .content {
-                background-color: rgba(255, 255, 255, 0.5);
+            #content {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 50px;
+                animation: glowing 5000ms infinite;
+                border-radius:5vh;
+            }
+            
+            @keyframes glowing {
+                0% {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                }
+                50% {
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+                }
+                100% {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                }
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,7 +99,7 @@
 
             // Remove text from message like a typewriter because fancy
             // I don't know if i'll ever use this but i'm keeping it
-            function removeMessage() {
+            async function removeMessage() {
                 let speed = 50;
                 let textLength = document.querySelector("#message").innerHTML.length;
                 let interval = setInterval(function() {
@@ -82,6 +108,7 @@
                         textLength--;
                     } else {
                         clearInterval(interval);
+                        return "";
                     }
                 }, speed);
             }
@@ -89,7 +116,7 @@
 
             // Simple change element's text to a new one
             // with a typewriter effect because I like it
-            function updateMessage(message) {
+            async function updateMessage(message) {
                 let i = 0;
                 let speed = 50;
                 let textLength = message.length;
@@ -99,6 +126,7 @@
                         i++;
                     } else {
                         clearInterval(interval);
+                        return "";
                     }
                 }, speed);
             }
@@ -107,10 +135,9 @@
 
     <body style="opacity:0" onload='fadeInPage()'>
         <div id="content">
-            
+            <!-- Message element is used to give any messages to the user -->
+            <div id="message" style="color: sienna;"></div>
         </div>
-        <!-- Message element is used to give any messages to the user -->
-        <div id="message"></div>
     </body>
 
 </html>
