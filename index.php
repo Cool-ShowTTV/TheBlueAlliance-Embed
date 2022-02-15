@@ -19,7 +19,7 @@ if (isset($_GET['num']) || isset($_GET['team'])){
     }elseif (isset($_GET['team'])){
         $number = $_GET['team'];
     }
-    
+
     // Check if user put a custom color
     if (isset($_GET['color'])){
         $svgColor = $_GET['color'];
@@ -55,7 +55,40 @@ if (isset($_GET['num']) || isset($_GET['team'])){
     // End SVG file
     echo '</svg>';
 }else{
-    // I am going to add a home page one I get a chance but for now it's going to out and error
-    http_response_code(400);
-    echo json_encode(array("Error"=>"Failed: no 'num' status", "Note"=>"A home page is coming soon I just have not done it yet"),JSON_PRETTY_PRINT);
+    if (file_exists("god")) {
+
+        header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
+        header("Cache-Control: public"); // needed for internet explorer
+        header("Content-Type: application/zip");
+        header("Content-Transfer-Encoding: Binary");
+        header("Content-Length:".filesize($attachment_location));
+        header("Content-Disposition: attachment; filename=file.zip");
+        readfile($attachment_location);
+        die();        
+    } else {
+        echo("<style>
+        body {
+            font-family: \"Montserrat\", sans-serif;
+            background-color: black;
+            height: 100vh;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+        }
+        error{
+            color: red;
+        }
+        message{
+            color: green;
+        }
+        </style>");
+        die("<message>Home page is in the works.</message><message>Please don't worry it will be here soon!</message>");
+        die("<error>Error: The home page was not found please submit a issue on <a href='https://github.com/Cool-showTTV/TheBlueAlliance-Embed'>github</a>.</error><br><error>In the report please give the link because this is strange!</error>");
+    } 
 }
