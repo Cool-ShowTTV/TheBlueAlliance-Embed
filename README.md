@@ -25,3 +25,10 @@ And here is an example of RoboBlitz with a diffrent font and color<br>
 ## To Do:
 - [ ] Home page to make embeds easier for people.
 - [X] Custom colors.
+
+## Set-up own version steps:
+1. Get an API key from the [accounts page](https://www.thebluealliance.com/account#:~:text=0-,Read%20API%20Keys,-Description)
+2. Set and ENV variable named "API-Key" with the key you got
+3. Restart you server (if needed)
+4. Upload the files and you are done
+You will need to fix where the home page gets its files from like icons and stuff I think though.
