@@ -19,7 +19,7 @@ function fallbackCopyTextToClipboard(text) {
     try {
         var successful = document.execCommand("copy");
         var msg = successful ? "successful" : "unsuccessful";
-        updateMessage("Fallback: Copying text command was " + msg);
+        alert("Fallback: Copying url to clipboard was " + msg);
     } catch (err) {
         prompt("Fallback: Failed to auto copy please copy from below:", text);
     }
@@ -34,7 +34,7 @@ function copyTextToClipboard(text) {
     }
     navigator.clipboard.writeText(text).then(
         () => {
-			updateMessage("Copying to clipboard was successful!");
+			alert("Copying url to clipboard was successful!");
 		},
         () => {
 			fallbackCopyTextToClipboard(text);
