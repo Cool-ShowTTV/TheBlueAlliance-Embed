@@ -96,7 +96,7 @@ if (isset($_GET['num']) || isset($_GET['team'])){
             color: green;
         }
         </style>");
-        die("<message>Home page is in the works.</message><message>Please don't worry it will be here soon!</message>");
+        //die("<message>Home page is in the works.</message><message>Please don't worry it will be here soon!</message>");
         die("<error>Error: The home page was not found please submit a issue on <a href='https://github.com/Cool-showTTV/TheBlueAlliance-Embed'>github</a>.</error><br><error>In the report please give the link because this is strange!</error>");
     } 
 }
