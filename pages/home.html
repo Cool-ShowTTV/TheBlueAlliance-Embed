@@ -106,6 +106,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="/pages/scripts/copy2Clip.js"></script>
+        <script src="/pages/scripts/makeURL.js"></script>
         <script>
             // It is entirely unneeded to fade in the page
             // but I like it so I'm keeping it :P
@@ -163,10 +164,10 @@
             <div id="message" style="color: sienna;"></div>
 
             <h1 class="rainbow-text">The Blue Alliance Embed Maker</h1>
-            <form class="center" action="/test.php">
+            <form class="center">
                 <label for="favcolor">Please choose the color for the text:</label>
                 <input type="color" id="txtColor" name="txtColor" value="#000000"><br>
-                <input type="submit">
+                <button onclick="createUrl()" type="button">Create URL</button>
             </form>
         </div>
     </body>
