@@ -12,13 +12,11 @@ async function createUrl(){
         
     // copy url to clipboard
     var url = document.location.origin + "/?font=" + fontName + "&num=" + frcNumber + "&color=" + color;
+    document.getElementById("example").src = url;
     if(github){url = `![events](${url}&github=true)`}
     console.log(url);
     copyTextToClipboard(url);
-    
-    setTimeout(function(){
-        removeMessage();
-    }, 1000);
+    setPage("examplePage");
 }
 
 
