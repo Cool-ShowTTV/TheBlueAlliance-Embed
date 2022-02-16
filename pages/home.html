@@ -28,15 +28,7 @@
                 animation: gradient 15s ease infinite;
                 font-family: "Montserrat", sans-serif;
                 height: 100vh;
-                display: -webkit-box;
-                display: flex;
-                -webkit-box-align: center;
-                align-items: center;
-                -webkit-box-pack: center;
-                justify-content: center;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                flex-direction: column;
+                
 
                 color:white;
             }
@@ -59,12 +51,27 @@
             }
         </style>
         <style>
+            .center {
+                text-align: center;
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+            }
+
             /* this is the style for all the stuff in content*/
             #content {
                 background-color: rgba(0, 0, 0, 0.5);
                 padding: 50px;
                 animation: glowing 5000ms infinite;
                 border-radius:5vh;
+                
+                
             }
             
             @keyframes glowing {
@@ -150,12 +157,17 @@
         </script>
     </head>
 
-    <body style="opacity:0" onload='fadeInPage()'>
-        <div id="content">
+    <body class="center" style="opacity:0" onload='fadeInPage()'>
+        <div class="center" id="content">
             <!-- Message element is used to give any messages to the user -->
             <div id="message" style="color: sienna;"></div>
 
             <h1 class="rainbow-text">The Blue Alliance Embed Maker</h1>
+            <form class="center" action="/test.php">
+                <label for="favcolor">Please choose the color for the text:</label>
+                <input type="color" id="txtColor" name="txtColor" value="#000000"><br>
+                <input type="submit">
+            </form>
         </div>
     </body>
 
