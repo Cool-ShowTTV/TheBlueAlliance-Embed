@@ -1,6 +1,16 @@
 // make button run a function
 function createUrl(){
+    frcNumber = document.getElementById("frcNumber").value;
+    github = document.getElementById("github");
+    color = document.getElementById("txtColor").value;
+
+    if(github.checked){}
     console.log("createUrl");
+    console.log({
+            'frcNumber': frcNumber,
+            'github': github.checked,
+            'color': color
+        });
 }
 
 

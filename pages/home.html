@@ -166,8 +166,15 @@
 
             <h1 class="rainbow-text">The Blue Alliance Embed Maker</h1>
             <form class="center">
-                <label for="favcolor">Please choose the color for the text:</label>
+                <label for="frcNumber">FRC team number:</label>
+                <input type="number" id="frcNumber" name="frcNumber" value="" min="1" max="9000"><br>
+                
+                <label for="txtColor">Please choose the color for the text:</label>
                 <input type="color" id="txtColor" name="txtColor" value="#000000"><br>
+
+                <label for="github">Please choose the color for the background:</label>
+                <input type="checkbox" id="github" name="github" value="github"><br>
+
                 <button onclick="createUrl()" type="button">Create URL</button>
             </form>
         </div>
