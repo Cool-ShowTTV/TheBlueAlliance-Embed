@@ -78,6 +78,22 @@
                     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
                 }
             }
+
+            .rainbow-text {
+                background-image: repeating-linear-gradient(0deg, violet, indigo, blue, green, yellow, orange, red, violet);
+                text-shadow: #000 1px 0 10px;
+                text-align: center;
+                background-position: right 20px bottom 10px;
+                background-size: 800% 800%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: rainbow 20s linear infinite;
+            }
+
+            @keyframes rainbow { 
+                0%{background-position:100% 0%}
+                100%{background-position:100% 100%}
+            }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -137,6 +153,8 @@
         <div id="content">
             <!-- Message element is used to give any messages to the user -->
             <div id="message" style="color: sienna;"></div>
+
+            <h1 class="rainbow-text">The Blue Alliance Embed Maker</h1>
         </div>
     </body>
 
