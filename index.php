@@ -64,6 +64,9 @@ if (isset($_GET['num']) || isset($_GET['team'])){
     echo '</svg>';
 }else{
     // Check if home file exists and if hosted on localhost
+    //if (file_exists("pages/home.html") && $_SERVER ['SERVER_NAME'] == "localhost") {
+    
+    // Check if home file exists and if so load it
     if (file_exists("pages/home.html") && $_SERVER ['SERVER_NAME'] == "localhost") {
 
         header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
