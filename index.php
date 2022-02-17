@@ -7,11 +7,6 @@ $svgTextSpace = 15;
 
 if (isset($_GET['num']) || isset($_GET['team'])){
     header('Content-Type: image/svg+xml');
-    echo '<svg
-        height="45"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >';
 
     // The messiest way to get input I have ever done don't look
     if (isset($_GET['num'])){
@@ -43,6 +38,8 @@ if (isset($_GET['num']) || isset($_GET['team'])){
     $startDateColumns = array_column($upcomingEvents,'start_date');
     $endDateColumns = array_column($upcomingEvents,'end_date');
 
+    $outPut = "";
+
     // Loop for each event
     foreach ($upcomingEvents as $x => $val) {
         // Remove anything that talks about what district it is or what event it is to make it look cleaner
@@ -57,9 +54,12 @@ if (isset($_GET['num']) || isset($_GET['team'])){
         //echo "$formatedName $formatedStartDate-$formatedEndDate<br>\n";
 
         // Output the list of events with Start and End date in SVG format
-        echo "<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"$fontName\" fill=\"#$svgColor\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
+        $outPut = "$outPut\t<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"$fontName\" fill=\"#$svgColor\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
         $svgTextSpace += 15;
     }
+    
+    echo "<svg height=\"$svgTextSpace\" width=\"100%\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n";
+    echo $outPut;
     // End SVG file
     echo '</svg>';
 }else{
