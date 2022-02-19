@@ -21,10 +21,13 @@ And here is an example of RoboBlitz with a diffrent font and color<br>
 
 ## Future Ideas:
 - [ ] Have a JS that can be added to auto put TBA events for teams. (no real reason just a challenge)
+- [ ] Have a diffrent file for getting blue banners of a team.
 
 ## To Do:
 - [ ] Home page to make embeds easier for people.
 - [X] Custom colors.
+- [ ] Add spacing varible.
+- [ ] Font size?
 
 ## Set-up own version steps:
 1. Get an API key from the [accounts page](https://www.thebluealliance.com/account#:~:text=0-,Read%20API%20Keys,-Description)
