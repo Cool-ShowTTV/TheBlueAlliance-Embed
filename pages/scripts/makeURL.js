@@ -4,14 +4,15 @@ async function createUrl(){
     fontName = document.getElementById("fontName").value;
     color = document.getElementById("txtColor").value;
     github = document.getElementById("github").checked;
+    doubleSpace = document.getElementById("doubleSpace").checked;
     
     fontName = encodeURIComponent(fontName);
     color = color.replace("#", "");
     console.log("createUrl");
-    console.log({'frcNumber': frcNumber,'fontName': fontName,'color': color,'github': github});
+    console.log({'frcNumber': frcNumber,'fontName': fontName,'color': color,'github': github,'doubleSpace': doubleSpace});
         
     // copy url to clipboard
-    var url = document.location.origin + "/?font=" + fontName + "&num=" + frcNumber + "&color=" + color;
+    var url = document.location.origin + "/?font=" + fontName + "&num=" + frcNumber + "&color=" + color + "&doubleSpace=" + doubleSpace;
     document.getElementById("example").src = url;
     if(github){url = `![events](${url}&github=true)`}
     console.log(url);
