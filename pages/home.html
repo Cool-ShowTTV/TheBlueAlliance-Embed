@@ -170,6 +170,11 @@
                     document.querySelector("#eventEmbedPage").style.display = "none";
                     document.querySelector("#examplePage").style.display = "none";
                     document.querySelector("#bannerEmbedPage").style.display = "block";
+                } else {
+                    document.querySelector("#eventEmbedPage").style.display = "block";
+                    document.querySelector("#examplePage").style.display = "none";
+                    document.querySelector("#bannerEmbedPage").style.display = "none";
+                    prompt("Page not found!\nReturning to home.\n\nPlease leave an issue on the GitHub.\n\nhttps://github.com/Cool-showTTV/TheBlueAlliance-Embed/issues","Error page: \""+pageName+"\"");
                 }
             }
         </script>
