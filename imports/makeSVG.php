@@ -1,8 +1,10 @@
 <?php
 $year = date("Y");//Get current year
-$svgTextSpace = 15;
+$spaceApart = 15;
 
-function createSVG($number,$svgColor,$fontName){
+function createSVG(){
+    global $spaceApart, $year;
+
     // The messiest way to get input I have ever done don't look
     if (isset($_GET['num'])){
         $number = $_GET['num'];
@@ -24,10 +26,16 @@ function createSVG($number,$svgColor,$fontName){
     }else{
         $fontName = "Courier, Monospace";
     }
+    // Check if user put a custom font name
+    if (isset($_GET['doubleSpace']) && $_GET['doubleSpace'] == "true"){
+        $svgTextSpace = $spaceApart;
+        $spaceApart = $spaceApart*2;
+    }else{
+        $svgTextSpace = $spaceApart;
+    }
 
     header('Content-Type: image/svg+xml');
 
-    global $svgTextSpace, $year;
     // Get a list of all upcoming events for a team number
     $upcomingEvents = getEventInfo($number,$year,true);
 
@@ -53,7 +61,7 @@ function createSVG($number,$svgColor,$fontName){
 
         // Output the list of events with Start and End date in SVG format
         $outPut = "$outPut\t<text y=\"$svgTextSpace\"  font-size=\"15\" font-family=\"$fontName\" fill=\"#$svgColor\">$formatedName $formatedStartDate-$formatedEndDate</text>\n";
-        $svgTextSpace += 15;
+        $svgTextSpace += $spaceApart;
     }
 
     echo "<svg height=\"$svgTextSpace\" width=\"100%\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n";
