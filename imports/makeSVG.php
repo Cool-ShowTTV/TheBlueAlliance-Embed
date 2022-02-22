@@ -3,6 +3,30 @@ $year = date("Y");//Get current year
 $svgTextSpace = 15;
 
 function createSVG($number,$svgColor,$fontName){
+    // The messiest way to get input I have ever done don't look
+    if (isset($_GET['num'])){
+        $number = $_GET['num'];
+    }elseif (isset($_GET['team'])){
+        $number = $_GET['team'];
+    }
+
+    // Check if user put a custom color
+    if (isset($_GET['color'])){
+        $svgColor = $_GET['color'];
+    }else{
+        $svgColor = "d7d3cb";
+    }
+
+    // Check if user put a custom font name
+    // I have no idea what font names are valid though
+    if (isset($_GET['font'])){
+        $fontName = $_GET['font'];
+    }else{
+        $fontName = "Courier, Monospace";
+    }
+
+    header('Content-Type: image/svg+xml');
+
     global $svgTextSpace, $year;
     // Get a list of all upcoming events for a team number
     $upcomingEvents = getEventInfo($number,$year,true);
