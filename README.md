@@ -1,5 +1,5 @@
 # Not done yet, but should work please leave any feedback in the [discussions tab](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/discussions)
-## one problem that can happen is that I update and your cache didn't clear.  So sometimes clearing cache can fix the site.
+## one problem that can happen is that I update the site and your cache didn't clear.<br>So sometimes clearing cache can fix the site.
 ​<br>
 
 # Known issues
