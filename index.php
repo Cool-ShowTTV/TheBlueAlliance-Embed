@@ -4,9 +4,11 @@ include "imports/makeSVG.php";
 
 
 
-if (isset($_GET['num']) || isset($_GET['team'])){
+if ((isset($_GET['num']) || isset($_GET['team'])) && !isset($_GET['banner'])){
     // I moved the SVG making into a function but I am too lazy to change the code so that it is its own "page"
     createSVG();
+}else if ((isset($_GET['num']) || isset($_GET['team'])) && isset($_GET['banner'])){
+
 }else{
     // Check if home file exists and if hosted on localhost
     //if (file_exists("pages/home.html") && $_SERVER ['SERVER_NAME'] == "localhost") {
