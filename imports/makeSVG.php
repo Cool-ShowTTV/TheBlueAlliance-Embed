@@ -16,6 +16,7 @@ function createSVG(){
     if (isset($_GET['color'])){
         $svgColor = $_GET['color'];
     }else{
+        // This is just a color that I think looks good on GitHub's light and dark mode
         $svgColor = "d7d3cb";
     }
 
