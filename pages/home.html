@@ -199,10 +199,14 @@
                 <label for="fontName">Font name:</label>
                 <input type="text" id="fontName" name="fontName" value="Arial"><br>
 
-                <label for="github">Is this going to be put on GitHub?:</label>
-                <input type="checkbox" id="github" name="github" value="github"><br>
+                <label for="embedType">Where is this going to be embedded on?:</label>
+                <select type="checkbox" id="embedType" name="embedType">
+                    <option value="siteAsSVG">On a site</option>
+                    <option value="github">GitHub</option>
+                    <option value="githubWLink">GitHub with link to TBA</option>
+                </select><br>
 
-                <label for="doubleSpace">Do you want to double space?</label>
+                <label for="doubleSpace">Do you want to double space?:</label>
                 <input type="checkbox" id="doubleSpace" name="doubleSpace" value="doubleSpace"><br>
 
                 <!--Template to make inputs

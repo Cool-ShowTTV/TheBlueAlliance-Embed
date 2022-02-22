@@ -3,18 +3,20 @@ async function createUrl(){
     frcNumber = document.getElementById("frcNumber").value;
     fontName = document.getElementById("fontName").value;
     color = document.getElementById("txtColor").value;
-    github = document.getElementById("github").checked;
+    embedType = document.getElementById("embedType").value;
     doubleSpace = document.getElementById("doubleSpace").checked;
     
     fontName = encodeURIComponent(fontName);
     color = color.replace("#", "");
     console.log("createUrl");
-    console.log({'frcNumber': frcNumber,'fontName': fontName,'color': color,'github': github,'doubleSpace': doubleSpace});
+    console.log({'frcNumber': frcNumber,'fontName': fontName,'color': color,'embedType': embedType,'doubleSpace': doubleSpace});
         
     // copy url to clipboard
-    var url = document.location.origin + "/?font=" + fontName + "&num=" + frcNumber + "&color=" + color + "&doubleSpace=" + doubleSpace;
+    var url = document.location.origin + "/embed.svg?font=" + fontName + "&num=" + frcNumber + "&color=" + color + "&doubleSpace=" + doubleSpace;
     document.getElementById("example").src = url;
-    if(github){url = `![events](${url}&github=true)`}
+    if(embedType == 'github'){url = `![events](${url}&github=true)`}
+    else if(embedType == 'githubWLink'){url = `[![events](${url}&github=true)](https://www.thebluealliance.com/team/${frcNumber})`}
+    else{url = `${url}`}
     console.log(url);
     copyTextToClipboard(url);
     setPage("examplePage");
