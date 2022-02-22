@@ -1,3 +1,4 @@
 Options -Indexes
 
 Redirect 301 "/embed.svg" "/"
+ErrorDocument 404 /pages/404.shtml
