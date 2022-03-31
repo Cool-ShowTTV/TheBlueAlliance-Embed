@@ -1,6 +1,6 @@
 # Not done yet, but should work please leave any feedback in the [discussions tab](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/discussions)
 ## one problem that can happen is that I update the site and your cache didn't clear.<br>So sometimes clearing cache can fix the site.
-​<br>
+<br>
 
 # Known issues
 - Text can be cut off if text is longer than my given width
@@ -23,10 +23,11 @@ And here is an example of RoboBlitz with a diffrent font and color and double sp
 - [ ] Have a diffrent file for getting blue banners of a team.
 
 ## To Do:
-- [ ] Home page to make embeds easier for people.
+- [X] Home page to make embeds easier for people.
 - [X] Custom colors.
 - [ ] Add spacing varible.
 - [ ] Font size?
+- [ ] Add a cache to reduce load on servers.
 
 ## Set-up own version steps:
 1. Get an API key from the [accounts page](https://www.thebluealliance.com/account#:~:text=0-,Read%20API%20Keys,-Description)
