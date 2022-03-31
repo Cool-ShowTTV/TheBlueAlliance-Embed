@@ -1,6 +1,8 @@
 # Not done yet, but should work please leave any feedback in the [discussions tab](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/discussions)
 ## one problem that can happen is that I update the site and your cache didn't clear.<br>So sometimes clearing cache can fix the site.
 <br>
+Also if I ever get the money I may make this have it's own domain.<br>
+I'm thinking of something like "TheBlueEmbed.com" but I'm not sure.
 
 # Known issues
 - Text can be cut off if text is longer than my given width
@@ -34,4 +36,5 @@ And here is an example of RoboBlitz with a diffrent font and color and double sp
 2. Set and ENV variable named "API-Key" with the key you got
 3. Restart you server (if needed)
 4. Upload the files and you are done
+<br>
 You will need to fix where the home page gets its files from like icons and stuff I think though.
