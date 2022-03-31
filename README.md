@@ -27,7 +27,7 @@ And here is an example of RoboBlitz with a diffrent font and color and double sp
 - [X] Custom colors.
 - [ ] Add spacing varible.
 - [ ] Font size?
-- [ ] Add a cache to reduce load on servers.
+- [ ] Add a cache to reduce load on servers. (GitHub caches but idk when it gets cleared)
 
 ## Set-up own version steps:
 1. Get an API key from the [accounts page](https://www.thebluealliance.com/account#:~:text=0-,Read%20API%20Keys,-Description)
