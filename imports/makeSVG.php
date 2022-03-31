@@ -49,9 +49,27 @@ function createSVG(){
 
     // Loop for each event
     foreach ($upcomingEvents as $x => $val) {
-        // Remove anything that talks about what district it is or what event it is to make it look cleaner
-        $formatedName = html_entity_decode(ltrim(stristr($nameColumns[$x], "District "),"District "));
-        $formatedName = substr($formatedName, 0, strpos($formatedName, "Event")+5);
+        $formatedName = html_entity_decode($nameColumns[$x]);
+        // Remove anything that is unneeded or what event it is to make it look cleaner
+        if (str_contains($nameColumns[$x], "Championship")){
+            //$formatedName = ltrim(stristr($formatedName, "Championship "),"Championship ");
+        }
+        
+        if (str_contains($nameColumns[$x], "District")){
+            $formatedName = ltrim(stristr($formatedName, "District "),"District ");
+        }
+
+        // Remove FIRST from the name (may remove later)
+        if (str_contains($nameColumns[$x], "FIRST")){
+            $formatedName = ltrim(stristr($formatedName, "FIRST"),"FIRST");
+        }
+
+        if (str_contains($nameColumns[$x], "Event")){
+            $formatedName = substr($formatedName, 0, strpos($formatedName, "Event")+5);
+        }
+        // Remove any double spaces
+        $formatedName = str_replace("  ", " ", $formatedName);
+        $formatedName = ltrim($formatedName);
 
         // Format into "Month day" and "day" to be able to list the start and end days
         $formatedStartDate = date_format(date_create($startDateColumns[$x]), "F j");

@@ -4,7 +4,7 @@
 
 # Known issues
 - Text can be cut off if text is longer than my given width
-- Some names can be cut but I currently don't know any (State Championship is currently known)
+- Some names can be cut but I currently don't know any (need some)
 - GitHub can show an error instead of the image (refreshing GitHub seems to fix it)
 - Probably some more that I forgot
 
