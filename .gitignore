@@ -3,6 +3,7 @@
 
 # Hide Test files
 test* 
+getInfo*
 
 ##### Windows
 # Windows thumbnail cache files
