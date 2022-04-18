@@ -1,3 +1,6 @@
+# Project on hold till I can deploy again from heroku
+### (The GitHub part on it is broken for me right now)
+#
 # Not done yet, but should work please leave any feedback in the [discussions tab](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/discussions)
 ## one problem that can happen is that I update the site and your cache didn't clear.<br>So sometimes clearing cache can fix the site.
 <br>
