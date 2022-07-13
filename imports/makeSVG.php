@@ -15,6 +15,7 @@ function createSVG(){
     // Check if user put a custom color
     if (isset($_GET['color'])){
         $svgColor = $_GET['color'];
+        $svgColor = htmlspecialchars($svgColor);
     }else{
         // This is just a color that I think looks good on GitHub's light and dark mode
         $svgColor = "d7d3cb";
