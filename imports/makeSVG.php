@@ -25,6 +25,7 @@ function createSVG(){
     // I have no idea what font names are valid though
     if (isset($_GET['font'])){
         $fontName = $_GET['font'];
+        $fontName = htmlspecialchars($fontName);
     }else{
         $fontName = "Courier, Monospace";
     }
