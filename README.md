@@ -1,5 +1,10 @@
 # Not done yet, but should work please leave any feedback in the [discussions tab](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/discussions)
-## one problem that can happen is that I update the site and your cache didn't clear.<br>So sometimes clearing cache can fix the site.
+
+<div align="center" title="Well hello there! Did you know that a shrimp's heart is in its head?" width="390">
+  <a href="#"><img src="https://sonarcloud.io/api/project_badges/measure?project=Cool-showTTV_TheBlueAlliance-Embed&metric=ncloc" title=":)"></a>
+  
+</div>
+
 <br>
 Also if I ever get the money I may make this have its own domain.<br>
 I'm thinking of something like "TheBlueEmbed.com" but I'm not sure.
@@ -38,3 +43,9 @@ And here is an example of RoboBlitz with a different font and color and double s
 4. Upload the files and you are done
 <br>
 You will need to fix where the home page gets its files from like icons and stuff I think though.
+
+
+<div align="right" title="I'm wrong on a lot but hey whats wrong about that!" width="390">
+  <a href="https://sonarcloud.io/"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" title=":)"></a>
+  
+</div>
