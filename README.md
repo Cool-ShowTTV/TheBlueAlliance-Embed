@@ -28,6 +28,7 @@ And here is an example of RoboBlitz with a different font and color and double s
 ## Future Ideas:
 - [ ] Have a JS that can be added to auto-put TBA events for teams. (no real reason just a challenge)
 - [ ] Have a different file for getting blue banners of a team.
+- [ ] Have a WP plugin.
 
 ## [To Do](https://github.com/Cool-showTTV/TheBlueAlliance-Embed/projects/1):
 - [X] Home page to make embeds easier for people.
